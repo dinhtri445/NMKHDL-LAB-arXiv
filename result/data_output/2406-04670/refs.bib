@@ -1,0 +1,325 @@
+@inproceedings{cai-etal-2021-neural,
+  pages = {7307--7318},
+  doi = {10.18653/v1/2021.acl-long.567},
+  url = {https://aclanthology.org/2021.acl-long.567},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2021},
+  month = {August},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  author = {Cai, Deng  and
+Wang, Yan  and
+Li, Huayang  and
+Lam, Wai  and
+Liu, Lemao},
+  title = {Neural Machine Translation with Monolingual Translation Memory},
+}
+
+@inproceedings{wu-etal-2020-dont,
+  pages = {3029--3039},
+  doi = {10.18653/v1/2020.emnlp-main.244},
+  url = {https://aclanthology.org/2020.emnlp-main.244},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2020},
+  month = {November},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  author = {Wu, Yuxiang  and
+Riedel, Sebastian  and
+Minervini, Pasquale  and
+Stenetorp, Pontus},
+  title = {Don′t Read Too Much Into It: Adaptive Computation for Open-Domain Question Answering},
+}
+
+@inproceedings{roberts-etal-2020-much,
+  pages = {5418--5426},
+  doi = {10.18653/v1/2020.emnlp-main.437},
+  url = {https://aclanthology.org/2020.emnlp-main.437},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2020},
+  month = {November},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  author = {Roberts, Adam  and
+Raffel, Colin  and
+Shazeer, Noam},
+  title = {How Much Knowledge Can You Pack Into the Parameters of a Language Model?},
+}
+
+@article{paq,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {2102.07033},
+  year = {2021},
+  author = {Patrick Lewis and Yuxiang Wu and Linqing Liu and Pasquale Minervini and Heinrich Küttler and Aleksandra Piktus and Pontus Stenetorp and Sebastian Riedel},
+  title = {PAQ: 65 Million Probably-Asked Questions and What You Can Do With Them},
+}
+
+@misc{fid,
+  publisher = {arXiv},
+  year = {2020},
+  url = {https://arxiv.org/abs/2012.15156},
+  author = {Gautier Izacard and Fabio Petroni and Lucas Hosseini and Nicola De Cao and Sebastian Riedel and Edouard Grave},
+  title = {A Memory Efficient Baseline for Open Domain Question Answering},
+}
+
+@inproceedings{dpr,
+  pages = {6769--6781},
+  doi = {10.18653/v1/2020.emnlp-main.550},
+  url = {https://www.aclweb.org/anthology/2020.emnlp-main.550},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2020},
+  month = {November},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  author = {Karpukhin, Vladimir and Oguz, Barlas and Min, Sewon and Lewis, Patrick and Wu, Ledell and Edunov, Sergey and Chen, Danqi and Yih, Wen-tau},
+  title = {Dense Passage Retrieval for Open-Domain Question Answering},
+}
+
+@inproceedings{fido,
+  abstract = {Fusion-in-Decoder (FiD) is a powerful retrieval-augmented language model that sets the state-of-the-art on many knowledge-intensive NLP tasks. However, the architecture used for FiD was chosen by making minimal modifications to a standard T5 model, which our analysis shows to be highly suboptimal for a retrieval-augmented model. In particular, FiD allocates the bulk of FLOPs to the encoder, while the majority of inference time results from memory bandwidth constraints in the decoder. We propose two simple changes to the FiD architecture to alleviate memory bandwidth constraints, and speed up inference by 7x. This allows us to use a much larger decoder at modest cost. We denote FiD with the above modifications as FiDO, and show that it strongly improves performance over existing FiD models for a wide range of inference budgets. For example, FiDO-Large-XXL performs faster inference than FiD-Base and achieves better performance than FiD-Large.},
+  pages = {11534--11547},
+  doi = {10.18653/v1/2023.findings-acl.732},
+  url = {https://aclanthology.org/2023.findings-acl.732},
+  publisher = {Association for Computational Linguistics},
+  address = {Toronto, Canada},
+  year = {2023},
+  month = {July},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2023},
+  author = {de Jong, Michiel  and
+Zemlyanskiy, Yury  and
+Ainslie, Joshua  and
+FitzGerald, Nicholas  and
+Sanghai, Sumit  and
+Sha, Fei  and
+Cohen, William},
+  title = {FiDO: Fusion-in-Decoder optimized for stronger performance and faster inference},
+}
+
+@inproceedings{emat,
+  abstract = {Access to external knowledge is essential for many natural language processing tasks, such as question answering and dialogue. Existing methods often rely on a parametric model that stores knowledge in its parameters, or use a retrieval-augmented model that has access to an external knowledge source. Parametric and retrieval-augmented models have complementary strengths in terms of computational efficiency and predictive accuracy. To combine the strength of both approaches, we propose the Efficient Memory-Augmented Transformer (EMAT) -- it encodes external knowledge into a key-value memory and exploits the fast maximum inner product search for memory querying. We also introduce pre-training tasks that allow EMAT to encode informative key-value representations, and to learn an implicit strategy to integrate multiple memory slots into the transformer. Experiments on various knowledge-intensive tasks such as question answering and dialogue datasets show that, simply augmenting parametric models (T5-base) using our method produces more accurate results (e.g., 25.8 → 44.3 EM on NQ) while retaining a high throughput (e.g., 1000 queries/s on NQ). Compared to retrieval-augmented models, EMAT runs substantially faster across the board and produces more accurate results on WoW and ELI5.},
+  pages = {5184--5196},
+  doi = {10.18653/v1/2022.emnlp-main.346},
+  url = {https://aclanthology.org/2022.emnlp-main.346},
+  publisher = {Association for Computational Linguistics},
+  address = {Abu Dhabi, United Arab Emirates},
+  year = {2022},
+  month = {December},
+  booktitle = {Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing},
+  author = {Wu, Yuxiang  and
+Zhao, Yu  and
+Hu, Baotian  and
+Minervini, Pasquale  and
+Stenetorp, Pontus  and
+Riedel, Sebastian},
+  title = {An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP Tasks},
+}
+
+@inproceedings{fid-light,
+  series = {SIGIR '23},
+  location = {Taipei, Taiwan},
+  keywords = {kilt, fusion-in-decoder, retrieval augmented generation},
+  numpages = {11},
+  pages = {1437–1447},
+  booktitle = {Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  abstract = {Retrieval-augmented generation models offer many benefits over standalone language models: besides a textual answer to a given query they provide provenance items retrieved from an updateable knowledge base. However, they are also more complex systems and need to handle long inputs. In this work, we introduce FiD-Light to strongly increase the efficiency of the state-of-the-art retrieval-augmented FiD model, while maintaining the same level of effectiveness. Our FiD-Light model constrains the information flow from the encoder (which encodes passages separately) to the decoder (using concatenated encoded representations). Furthermore, we adapt FiD-Light with re-ranking capabilities through textual source pointers, to improve the top-ranked provenance precision. Our experiments on a diverse set of seven knowledge intensive tasks (KILT) show FiD-Light consistently improves the Pareto frontier between query latency and effectiveness. FiD-Light with source pointing sets substantial new state-of-the-art results on six KILT tasks for combined text generation and provenance retrieval evaluation, while maintaining high efficiency.},
+  doi = {10.1145/3539618.3591687},
+  url = {https://doi.org/10.1145/3539618.3591687},
+  address = {New York, NY, USA},
+  publisher = {Association for Computing Machinery},
+  isbn = {9781450394086},
+  year = {2023},
+  title = {FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation},
+  author = {Hofstätter, Sebastian and Chen, Jiecao and Raman, Karthik and Zamani, Hamed},
+}
+
+@inproceedings{qamat,
+  abstract = {Existing state-of-the-art methods for open-domain question-answering (ODQA) use an open book approach in which information is first retrieved from a large text corpus or knowledge base (KB) and then reasoned over to produce an answer. A recent alternative is to retrieve from a collection of previously-generated question-answer pairs; this has several practical advantages including being more memory and compute-efficient. Question-answer pairs are also appealing in that they can be viewed as an intermediate between text and KB triples: like KB triples, they often concisely express a single relationship, but like text, have much higher coverage than traditional KBs. In this work, we describe a new QA system that augments a text-to-text model with a large memory of question-answer pairs, and a new pre-training task for the latent step of question retrieval. The pre-training task substantially simplifies training and greatly improves performance on smaller QA benchmarks. Unlike prior systems of this sort, our QA system can also answer multi-hop questions that do not explicitly appear in the collection of stored question-answer pairs.},
+  pages = {1597--1610},
+  doi = {10.18653/v1/2023.eacl-main.117},
+  url = {https://aclanthology.org/2023.eacl-main.117},
+  publisher = {Association for Computational Linguistics},
+  address = {Dubrovnik, Croatia},
+  year = {2023},
+  month = {May},
+  booktitle = {Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics},
+  author = {Chen, Wenhu  and
+Verga, Pat  and
+de Jong, Michiel  and
+Wieting, John  and
+Cohen, William W.},
+  title = {Augmenting Pre-trained Language Models with QA-Memory for Open-Domain Question Answering},
+}
+
+@inproceedings{rag,
+  bdsk-url-1 = {https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf},
+  year = {2020},
+  volume = {33},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf},
+  title = {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks},
+  publisher = {Curran Associates, Inc.},
+  pages = {9459--9474},
+  editor = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
+  booktitle = {Advances in Neural Information Processing Systems},
+  author = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Goyal, Naman and Küttler, Heinrich and Lewis, Mike and Yih, Wen-tau and Rocktäschel, Tim and Riedel, Sebastian and Kiela, Douwe},
+}
+
+@article{t5,
+  url = {http://jmlr.org/papers/v21/20-074.html},
+  pages = {1-67},
+  number = {140},
+  volume = {21},
+  year = {2020},
+  journal = {Journal of Machine Learning Research},
+  title = {Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer},
+  author = {Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+}
+
+@inproceedings{fid_kg,
+  abstract = {Current Open-Domain Question Answering (ODQA) models typically include a retrieving module and a reading module, where the retriever selects potentially relevant passages from open-source documents for a given question, and the reader produces an answer based on the retrieved passages. The recently proposed Fusion-in-Decoder (FiD) framework is a representative example, which is built on top of a dense passage retriever and a generative reader, achieving the state-of-the-art performance. In this paper we further improve the FiD approach by introducing a knowledge-enhanced version, namely KG-FiD. Our new model uses a knowledge graph to establish the structural relationship among the retrieved passages, and a graph neural network (GNN) to re-rank the passages and select only a top few for further processing. Our experiments on common ODQA benchmark datasets (Natural Questions and TriviaQA) demonstrate that KG-FiD can achieve comparable or better performance in answer prediction than FiD, with less than 40% of the computation cost.},
+  pages = {4961--4974},
+  doi = {10.18653/v1/2022.acl-long.340},
+  url = {https://aclanthology.org/2022.acl-long.340},
+  publisher = {Association for Computational Linguistics},
+  address = {Dublin, Ireland},
+  year = {2022},
+  month = {May},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  author = {Yu, Donghan  and
+Zhu, Chenguang  and
+Fang, Yuwei  and
+Yu, Wenhao  and
+Wang, Shuohang  and
+Xu, Yichong  and
+Ren, Xiang  and
+Yang, Yiming  and
+Zeng, Michael},
+  title = {KG-FiD: Infusing Knowledge Graph in Fusion-in-Decoder for Open-Domain Question Answering},
+}
+
+@inproceedings{knn_lm,
+  url = {https://openreview.net/forum?id=HklBjCEKvH},
+  year = {2020},
+  booktitle = {International Conference on Learning Representations},
+  author = {Urvashi Khandelwal and Omer Levy and Dan Jurafsky and Luke Zettlemoyer and Mike Lewis},
+  title = {Generalization through Memorization: Nearest Neighbor Language Models},
+}
+
+@inproceedings{difar,
+  abstract = {There has been a surge of interest in utilizing Knowledge Graphs (KGs) for various natural language processing/understanding tasks. The conventional mechanism to retrieve facts in KGs usually involves three steps: entity span detection, entity disambiguation, and relation classification. However, this approach requires additional labels for training each of the three subcomponents in addition to pairs of input texts and facts, and also may accumulate errors propagated from failures in previous steps. To tackle these limitations, we propose a simple knowledge retrieval framework, which directly retrieves facts from the KGs given the input text based on their representational similarities, which we refer to as Direct Fact Retrieval (DiFaR). Specifically, we first embed all facts in KGs onto a dense embedding space by using a language model trained by only pairs of input texts and facts, and then provide the nearest facts in response to the input text. Since the fact, consisting of only two entities and one relation, has little context to encode, we propose to further refine ranks of top-k retrieved facts with a reranker that contextualizes the input text and the fact jointly. We validate our DiFaR framework on multiple fact retrieval tasks, showing that it significantly outperforms relevant baselines that use the three-step approach.},
+  pages = {10038--10055},
+  doi = {10.18653/v1/2023.acl-long.558},
+  url = {https://aclanthology.org/2023.acl-long.558},
+  publisher = {Association for Computational Linguistics},
+  address = {Toronto, Canada},
+  year = {2023},
+  month = {July},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  author = {Baek, Jinheon  and
+Aji, Alham Fikri  and
+Lehmann, Jens  and
+Hwang, Sung Ju},
+  title = {Direct Fact Retrieval from Knowledge Graphs without Entity Linking},
+}
+
+@inproceedings{wq,
+  pages = {1533--1544},
+  url = {https://www.aclweb.org/anthology/D13-1160},
+  publisher = {Association for Computational Linguistics},
+  address = {Seattle, Washington, USA},
+  year = {2013},
+  month = {October},
+  booktitle = {Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing},
+  author = {Berant, Jonathan  and
+Chou, Andrew  and
+Frostig, Roy  and
+Liang, Percy},
+  title = {Semantic Parsing on Freebase from Question-Answer Pairs},
+}
+
+@article{nq,
+  journal = {Transactions of the Association of Computational Linguistics},
+  year = {2019},
+  author = {Tom Kwiatkowski and Jennimaria Palomaki and Olivia Redfield and Michael Collins and Ankur Parikh and Chris Alberti and Danielle Epstein and Illia Polosukhin and Matthew Kelcey and Jacob Devlin and Kenton Lee and Kristina N. Toutanova and Llion Jones and Ming-Wei Chang and Andrew Dai and Jakob Uszkoreit and Quoc Le and Slav Petrov},
+  title = {Natural Questions: a Benchmark for Question Answering Research},
+}
+
+@article{tqa,
+  eprint = {1705.03551},
+  archiveprefix = {arXiv},
+  pages = {arXiv:1705.03551},
+  eid = {arXiv:1705.03551},
+  year = {2017},
+  journal = {arXiv e-prints},
+  title = {triviaqa: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension},
+  author = {Joshi, Mandar and Choi, Eunsol and Weld,
+Daniel and Zettlemoyer, Luke},
+}
+
+@article{DBLP:journals/corr/abs-2112-08560,
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl = {https://dblp.org/rec/journals/corr/abs-2112-08560.bib},
+  timestamp = {Mon, 03 Jan 2022 15:45:35 +0100},
+  eprint = {2112.08560},
+  eprinttype = {arXiv},
+  url = {https://arxiv.org/abs/2112.08560},
+  year = {2021},
+  volume = {abs/2112.08560},
+  journal = {CoRR},
+  title = {Block-Skim: Efficient Question Answering for Transformer},
+  author = {Yue Guan and
+Zhengyi Li and
+Jingwen Leng and
+Zhouhan Lin and
+Minyi Guo and
+Yuhao Zhu},
+}
+
+@inproceedings{bart,
+  abstract = {We present BART, a denoising autoencoder for pretraining sequence-to-sequence models. BART is trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. It uses a standard Tranformer-based neural machine translation architecture which, despite its simplicity, can be seen as generalizing BERT (due to the bidirectional encoder), GPT (with the left-to-right decoder), and other recent pretraining schemes. We evaluate a number of noising approaches, finding the best performance by both randomly shuffling the order of sentences and using a novel in-filling scheme, where spans of text are replaced with a single mask token. BART is particularly effective when fine tuned for text generation but also works well for comprehension tasks. It matches the performance of RoBERTa on GLUE and SQuAD, and achieves new state-of-the-art results on a range of abstractive dialogue, question answering, and summarization tasks, with gains of up to 3.5 ROUGE. BART also provides a 1.1 BLEU increase over a back-translation system for machine translation, with only target language pretraining. We also replicate other pretraining schemes within the BART framework, to understand their effect on end-task performance.},
+  pages = {7871--7880},
+  doi = {10.18653/v1/2020.acl-main.703},
+  url = {https://aclanthology.org/2020.acl-main.703},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2020},
+  month = {July},
+  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  author = {Lewis, Mike  and
+Liu, Yinhan  and
+Goyal, Naman  and
+Ghazvininejad, Marjan  and
+Mohamed, Abdelrahman  and
+Levy, Omer  and
+Stoyanov, Veselin  and
+Zettlemoyer, Luke},
+  title = {BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension},
+}
+
+@inproceedings{two_step,
+  abstract = {The retriever-reader pipeline has shown promising performance in open-domain QA but suffers from a very slow inference speed. Recently proposed question retrieval models tackle this problem by indexing question-answer pairs and searching for similar questions. These models have shown a significant increase in inference speed, but at the cost of lower QA performance compared to the retriever-reader models. This paper proposes a two-step question retrieval model, SQuID (Sequential Question-Indexed Dense retrieval) and distant supervision for training. SQuID uses two bi-encoders for question retrieval. The first-step retriever selects top-k similar questions, and the second-step retriever finds the most similar question from the top-k questions. We evaluate the performance and the computational efficiency of SQuID. The results show that SQuID significantly increases the performance of existing question retrieval models with a negligible loss on inference speed.},
+  pages = {1487--1492},
+  doi = {10.18653/v1/2022.findings-acl.117},
+  url = {https://aclanthology.org/2022.findings-acl.117},
+  publisher = {Association for Computational Linguistics},
+  address = {Dublin, Ireland},
+  year = {2022},
+  month = {May},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2022},
+  author = {Seonwoo, Yeon  and
+Son, Juhee  and
+Jin, Jiho  and
+Lee, Sang-Woo  and
+Kim, Ji-Hoon  and
+Ha, Jung-Woo  and
+Oh, Alice},
+  title = {Two-Step Question Retrieval for Open-Domain QA},
+}
+
+@article{song2020mpnet,
+  year = {2020},
+  journal = {arXiv preprint arXiv:2004.09297},
+  author = {Song, Kaitao and Tan, Xu and Qin, Tao and Lu, Jianfeng and Liu, Tie-Yan},
+  title = {MPNet: Masked and Permuted Pre-training for Language Understanding},
+}
+

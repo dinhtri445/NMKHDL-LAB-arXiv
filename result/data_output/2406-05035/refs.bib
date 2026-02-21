@@ -1,0 +1,568 @@
+@inproceedings{camburu-etal-2020-make,
+  abstract = {To increase trust in artificial intelligence systems, a promising research direction consists of designing neural models capable of generating natural language explanations for their predictions. In this work, we show that such models are nonetheless prone to generating mutually inconsistent explanations, such as ″Because there is a dog in the image.″ and ″Because there is no dog in the [same] image.″, exposing flaws in either the decision-making process of the model or in the generation of the explanations. We introduce a simple yet effective adversarial framework for sanity checking models against the generation of inconsistent natural language explanations. Moreover, as part of the framework, we address the problem of adversarial attacks with full target sequences, a scenario that was not previously addressed in sequence-to-sequence attacks. Finally, we apply our framework on a state-of-the-art neural natural language inference model that provides natural language explanations for its predictions. Our framework shows that this model is capable of generating a significant number of inconsistent explanations.},
+  pages = {4157--4165},
+  doi = {10.18653/v1/2020.acl-main.382},
+  url = {https://aclanthology.org/2020.acl-main.382},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2020},
+  month = {July},
+  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  editor = {Jurafsky, Dan  and
+Chai, Joyce  and
+Schluter, Natalie  and
+Tetreault, Joel},
+  author = {Camburu, Oana-Maria  and
+Shillingford, Brendan  and
+Minervini, Pasquale  and
+Lukasiewicz, Thomas  and
+Blunsom, Phil},
+  title = {Make Up Your Mind! Adversarial Generation of Inconsistent Natural Language Explanations},
+}
+
+@inproceedings{rajani-etal-2019-explain,
+  abstract = {Deep learning models perform poorly on tasks that require commonsense reasoning, which often necessitates some form of world-knowledge or reasoning over information not immediately present in the input. We collect human explanations for commonsense reasoning in the form of natural language sequences and highlighted annotations in a new dataset called Common Sense Explanations (CoS-E). We use CoS-E to train language models to automatically generate explanations that can be used during training and inference in a novel Commonsense Auto-Generated Explanation (CAGE) framework. CAGE improves the state-of-the-art by 10% on the challenging CommonsenseQA task. We further study commonsense reasoning in DNNs using both human and auto-generated explanations including transfer to out-of-domain tasks. Empirical results indicate that we can effectively leverage language models for commonsense reasoning.},
+  pages = {4932--4942},
+  doi = {10.18653/v1/P19-1487},
+  url = {https://aclanthology.org/P19-1487},
+  publisher = {Association for Computational Linguistics},
+  address = {Florence, Italy},
+  year = {2019},
+  month = {July},
+  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  editor = {Korhonen, Anna  and
+Traum, David  and
+Màrquez, Lluı́s},
+  author = {Rajani, Nazneen Fatema  and
+McCann, Bryan  and
+Xiong, Caiming  and
+Socher, Richard},
+  title = {Explain Yourself! Leveraging Language Models for Commonsense Reasoning},
+}
+
+@inproceedings{aggarwal-etal-2021-explanations,
+  abstract = {CommonsenseQA (CQA) (Talmor et al., 2019) dataset was recently released to advance the research on common-sense question answering (QA) task. Whereas the prior work has mostly focused on proposing QA models for this dataset, our aim is to retrieve as well as generate explanation for a given (question, correct answer choice, incorrect answer choices) tuple from this dataset. Our explanation definition is based on certain desiderata, and translates an explanation into a set of positive and negative common-sense properties (aka facts) which not only explain the correct answer choice but also refute the incorrect ones. We human-annotate a first-of-its-kind dataset (called ECQA) of positive and negative properties, as well as free-flow explanations, for $11K$ QA pairs taken from the CQA dataset. We propose a latent representation based property retrieval model as well as a GPT-2 based property generation model with a novel two step fine-tuning procedure. We also propose a free-flow explanation generation model. Extensive experiments show that our retrieval model beats BM25 baseline by a relative gain of 100% in $F_1$ score, property generation model achieves a respectable $F_1$ score of 36.4, and free-flow generation model achieves a similarity score of 61.9, where last two scores are based on a human correlated semantic similarity metric.},
+  pages = {3050--3065},
+  doi = {10.18653/v1/2021.acl-long.238},
+  url = {https://aclanthology.org/2021.acl-long.238},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2021},
+  month = {August},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  editor = {Zong, Chengqing  and
+Xia, Fei  and
+Li, Wenjie  and
+Navigli, Roberto},
+  author = {Aggarwal, Shourya  and
+Mandowara, Divyanshu  and
+Agrawal, Vishwajeet  and
+Khandelwal, Dinesh  and
+Singla, Parag  and
+Garg, Dinesh},
+  title = {Explanations for CommonsenseQA: New Dataset and Models},
+}
+
+@inproceedings{NEURIPSDatasetsBenchmarks2021,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {2102.12060},
+  year = {2021},
+  author = {Wiegreffe, Sarah and Marasovic, Ana},
+  title = {Teach Me to Explain: A Review of Datasets for Explainable Natural Language Processing},
+  volume = {1},
+  url = {https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/698d51a19d8a121ce581499d7b701668-Paper.pdf},
+  pages = {},
+  editor = {J. Vanschoren and S. Yeung},
+  booktitle = {Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks},
+}
+
+@article{LOMBROZO2007232,
+  abstract = {What makes some explanations better than others? This paper explores the roles of simplicity and probability in evaluating competing causal explanations. Four experiments investigate the hypothesis that simpler explanations are judged both better and more likely to be true. In all experiments, simplicity is quantified as the number of causes invoked in an explanation, with fewer causes corresponding to a simpler explanation. Experiment 1 confirms that all else being equal, both simpler and more probable explanations are preferred. Experiments 2 and 3 examine how explanations are evaluated when simplicity and probability compete. The data suggest that simpler explanations are assigned a higher prior probability, with the consequence that disproportionate probabilistic evidence is required before a complex explanation will be favored over a simpler alternative. Moreover, committing to a simple but unlikely explanation can lead to systematic overestimation of the prevalence of the cause invoked in the simple explanation. Finally, Experiment 4 finds that the preference for simpler explanations can be overcome when probability information unambiguously supports a complex explanation over a simpler alternative. Collectively, these findings suggest that simplicity is used as a basis for evaluating explanations and for assigning prior probabilities when unambiguous probability information is absent. More broadly, evaluating explanations may operate as a mechanism for generating estimates of subjective probability.},
+  keywords = {Causal explanation, Simplicity, Inference to the best explanation, Subjective probability},
+  author = {Tania Lombrozo},
+  url = {https://www.sciencedirect.com/science/article/pii/S0010028506000739},
+  doi = {https://doi.org/10.1016/j.cogpsych.2006.09.006},
+  issn = {0010-0285},
+  year = {2007},
+  pages = {232-257},
+  number = {3},
+  volume = {55},
+  journal = {Cognitive Psychology},
+  title = {Simplicity and probability in causal explanation},
+}
+
+@inproceedings{clinciu-etal-2021-study,
+  abstract = {As transparency becomes key for robotics and AI, it will be necessary to evaluate the methods through which transparency is provided, including automatically generated natural language (NL) explanations. Here, we explore parallels between the generation of such explanations and the much-studied field of evaluation of Natural Language Generation (NLG). Specifically, we investigate which of the NLG evaluation measures map well to explanations. We present the ExBAN corpus: a crowd-sourced corpus of NL explanations for Bayesian Networks. We run correlations comparing human subjective ratings with NLG automatic measures. We find that embedding-based automatic NLG evaluation methods, such as BERTScore and BLEURT, have a higher correlation with human ratings, compared to word-overlap metrics, such as BLEU and ROUGE. This work has implications for Explainable AI and transparent robotic and autonomous systems.},
+  pages = {2376--2387},
+  doi = {10.18653/v1/2021.eacl-main.202},
+  url = {https://aclanthology.org/2021.eacl-main.202},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2021},
+  month = {April},
+  booktitle = {Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume},
+  editor = {Merlo, Paola  and
+Tiedemann, Jorg  and
+Tsarfaty, Reut},
+  author = {Clinciu, Miruna-Adriana  and
+Eshghi, Arash  and
+Hastie, Helen},
+  title = {A Study of Automatic Metrics for the Evaluation of Natural Language Explanations},
+}
+
+@inproceedings{chen-etal-2023-rev,
+  abstract = {Generating free-text rationales is a promising step towards explainable NLP, yet evaluating such rationales remains a challenge. Existing metrics have mostly focused on measuring the association between the rationale and a given label. We argue that an ideal metric should focus on the new information uniquely provided in the rationale that is otherwise not provided in the input or the label. We investigate this research problem from an information-theoretic perspective using conditional V-information (Hewitt et al., 2021). More concretely, we propose a metric called REV (Rationale Evaluation with conditional V-information), to quantify the amount of new, label-relevant information in a rationale beyond the information already available in the input or the label. Experiments across four benchmarks with reasoning tasks, including chain-of-thought, demonstrate the effectiveness of REV in evaluating rationale-label pairs, compared to existing metrics. We further demonstrate REV is consistent with human judgments on rationale evaluations and provides more sensitive measurements of new information in free-text rationales. When used alongside traditional performance metrics, REV provides deeper insights into models′ reasoning and prediction processes.},
+  pages = {2007--2030},
+  doi = {10.18653/v1/2023.acl-long.112},
+  url = {https://aclanthology.org/2023.acl-long.112},
+  publisher = {Association for Computational Linguistics},
+  address = {Toronto, Canada},
+  year = {2023},
+  month = {July},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  editor = {Rogers, Anna  and
+Boyd-Graber, Jordan  and
+Okazaki, Naoaki},
+  author = {Chen, Hanjie  and
+Brahman, Faeze  and
+Ren, Xiang  and
+Ji, Yangfeng  and
+Choi, Yejin  and
+Swayamdipta, Swabha},
+  title = {REV: Information-Theoretic Evaluation of Free-Text Rationales},
+}
+
+@article{Liao_Zhang_Luss_Doshi-Velez_Dhurandhar_2022,
+  pages = {147-159},
+  month = {Oct.},
+  year = {2022},
+  author = {Liao, Q. Vera and Zhang, Yunfeng and Luss, Ronny and Doshi-Velez, Finale and Dhurandhar, Amit},
+  journal = {Proceedings of the AAAI Conference on Human Computation and Crowdsourcing},
+  number = {1},
+  abstractnote = {Recent years have seen a surge of interest in the field of explainable AI (XAI), with a plethora of algorithms proposed in the literature. However, a lack of consensus on how to evaluate XAI hinders the advancement of the field. We highlight that XAI is not a monolithic set of technologies---researchers and practitioners have begun to leverage XAI algorithms to build XAI systems that serve different usage contexts, such as model debugging and decision-support. Algorithmic research of XAI, however, often does not account for these diverse downstream usage contexts, resulting in limited effectiveness or even unintended consequences for actual users, as well as difficulties for practitioners to make technical choices. We argue that one way to close the gap is to develop evaluation methods that account for different user requirements in these usage contexts. Towards this goal, we introduce a perspective of contextualized XAI evaluation by considering the relative importance of XAI evaluation criteria for prototypical usage contexts of XAI. To explore the context dependency of XAI evaluation criteria, we conduct two survey studies, one with XAI topical experts and another with crowd workers. Our results urge for responsible AI research with usage-informed evaluation practices, and provide a nuanced understanding of user requirements for XAI in different usage contexts.},
+  doi = {10.1609/hcomp.v10i1.21995},
+  url = {https://ojs.aaai.org/index.php/HCOMP/article/view/21995},
+  volume = {10},
+  title = {Connecting Algorithmic Research and Usage Contexts: A Perspective of Contextualized Evaluation for Explainable AI},
+}
+
+@inproceedings{boyd-graber-etal-2022-human,
+  abstract = {The NLP community are increasingly interested in providing explanations for NLP models to help people make sense of model behavior and potentially improve human interaction with models. In addition to computational challenges in generating these explanations, evaluations of the generated explanations require human-centered perspectives and approaches. This tutorial will provide an overview of human-centered evaluations of explanations. First, we will give a brief introduction to the psychological foundation of explanations as well as types of NLP model explanations and their corresponding presentation, to provide the necessary background. We will then present a taxonomy of human-centered evaluation of explanations and dive into depth in the two categories: 1) evaluation based on human-annotated explanations; 2) evaluation with human-subjects studies. We will conclude by discussing future directions. We will also adopt a flipped format to maximize the in- teractive components for the live audience.},
+  pages = {26--32},
+  doi = {10.18653/v1/2022.naacl-tutorials.4},
+  url = {https://aclanthology.org/2022.naacl-tutorials.4},
+  publisher = {Association for Computational Linguistics},
+  address = {Seattle, United States},
+  year = {2022},
+  month = {July},
+  booktitle = {Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies: Tutorial Abstracts},
+  editor = {Ballesteros, Miguel  and
+Tsvetkov, Yulia  and
+Alm, Cecilia O.},
+  author = {Boyd-Graber, Jordan  and
+Carton, Samuel  and
+Feng, Shi  and
+Liao, Q. Vera  and
+Lombrozo, Tania  and
+Smith-Renner, Alison  and
+Tan, Chenhao},
+  title = {Human-Centered Evaluation of Explanations},
+}
+
+@misc{yeung2020sequential,
+  primaryclass = {cs.LG},
+  archiveprefix = {arXiv},
+  eprint = {2007.09028},
+  year = {2020},
+  author = {Arnold YS Yeung and Shalmali Joshi and Joseph Jay Williams and Frank Rudzicz},
+  title = {Sequential Explanations with Mental Model-Based Policies},
+}
+
+@article{MILLER20191,
+  abstract = {There has been a recent resurgence in the area of explainable artificial intelligence as researchers and practitioners seek to provide more transparency to their algorithms. Much of this research is focused on explicitly explaining decisions or actions to a human observer, and it should not be controversial to say that looking at how humans explain to each other can serve as a useful starting point for explanation in artificial intelligence. However, it is fair to say that most work in explainable artificial intelligence uses only the researchers' intuition of what constitutes a ‘good’ explanation. There exist vast and valuable bodies of research in philosophy, psychology, and cognitive science of how people define, generate, select, evaluate, and present explanations, which argues that people employ certain cognitive biases and social expectations to the explanation process. This paper argues that the field of explainable artificial intelligence can build on this existing research, and reviews relevant papers from philosophy, cognitive psychology/science, and social psychology, which study these topics. It draws out some important findings, and discusses ways that these can be infused with work on explainable artificial intelligence.},
+  keywords = {Explanation, Explainability, Interpretability, Explainable AI, Transparency},
+  author = {Tim Miller},
+  url = {https://www.sciencedirect.com/science/article/pii/S0004370218305988},
+  doi = {https://doi.org/10.1016/j.artint.2018.07.007},
+  issn = {0004-3702},
+  year = {2019},
+  pages = {1-38},
+  volume = {267},
+  journal = {Artificial Intelligence},
+  title = {Explanation in artificial intelligence: Insights from the social sciences},
+}
+
+@inproceedings{reimers-gurevych-2019-sentence,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {1908.10084},
+  year = {2019},
+  author = {Reimers, Nils  and
+Gurevych, Iryna},
+  title = {Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks},
+  abstract = {BERT (Devlin et al., 2018) and RoBERTa (Liu et al., 2019) has set a new state-of-the-art performance on sentence-pair regression tasks like semantic textual similarity (STS). However, it requires that both sentences are fed into the network, which causes a massive computational overhead: Finding the most similar pair in a collection of 10,000 sentences requires about 50 million inference computations (~65 hours) with BERT. The construction of BERT makes it unsuitable for semantic similarity search as well as for unsupervised tasks like clustering. In this publication, we present Sentence-BERT (SBERT), a modification of the pretrained BERT network that use siamese and triplet network structures to derive semantically meaningful sentence embeddings that can be compared using cosine-similarity. This reduces the effort for finding the most similar pair from 65 hours with BERT / RoBERTa to about 5 seconds with SBERT, while maintaining the accuracy from BERT. We evaluate SBERT and SRoBERTa on common STS tasks and transfer learning tasks, where it outperforms other state-of-the-art sentence embeddings methods.},
+  pages = {3982--3992},
+  doi = {10.18653/v1/D19-1410},
+  url = {https://aclanthology.org/D19-1410},
+  publisher = {Association for Computational Linguistics},
+  address = {Hong Kong, China},
+  month = {November},
+  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+  editor = {Inui, Kentaro  and
+Jiang, Jing  and
+Ng, Vincent  and
+Wan, Xiaojun},
+}
+
+@inproceedings{zhu2023Situated,
+  keywords = {conference},
+  url = {https://arxiv.org/abs/2308.14115},
+  year = {2023},
+  author = {Zhu, Zining and Jiang, Haoming and Yang, Jingfeng and Nag, Sreyashi and Zhang, Chao and Jie, Huang and Gao, Yifan and Rudzicz, Frank and Yin, Bing},
+  booktitle = {ACL NLRSE Workshop},
+  title = {Situated Natural Languages Explanations},
+}
+
+@misc{touvron2023llama,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {2307.09288},
+  year = {2023},
+  author = {Hugo Touvron and Louis Martin and Kevin Stone and Peter Albert and Amjad Almahairi and Yasmine Babaei and Nikolay Bashlykov and Soumya Batra and Prajjwal Bhargava and Shruti Bhosale and Dan Bikel and Lukas Blecher and Cristian Canton Ferrer and Moya Chen and Guillem Cucurull and David Esiobu and Jude Fernandes and Jeremy Fu and Wenyin Fu and Brian Fuller and Cynthia Gao and Vedanuj Goswami and Naman Goyal and Anthony Hartshorn and Saghar Hosseini and Rui Hou and Hakan Inan and Marcin Kardas and Viktor Kerkez and Madian Khabsa and Isabel Kloumann and Artem Korenev and Punit Singh Koura and Marie-Anne Lachaux and Thibaut Lavril and Jenya Lee and Diana Liskovich and Yinghai Lu and Yuning Mao and Xavier Martinet and Todor Mihaylov and Pushkar Mishra and Igor Molybog and Yixin Nie and Andrew Poulton and Jeremy Reizenstein and Rashi Rungta and Kalyan Saladi and Alan Schelten and Ruan Silva and Eric Michael Smith and Ranjan Subramanian and Xiaoqing Ellen Tan and Binh Tang and Ross Taylor and Adina Williams and Jian Xiang Kuan and Puxin Xu and Zheng Yan and Iliyan Zarov and Yuchen Zhang and Angela Fan and Melanie Kambadur and Sharan Narang and Aurelien Rodriguez and Robert Stojnic and Sergey Edunov and Thomas Scialom},
+  title = {Llama 2: Open Foundation and Fine-Tuned Chat Models},
+}
+
+@misc{ai2024yi,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {2403.04652},
+  year = {2024},
+  author = {01. AI and : and Alex Young and Bei Chen and Chao Li and Chengen Huang and Ge Zhang and Guanwei Zhang and Heng Li and Jiangcheng Zhu and Jianqun Chen and Jing Chang and Kaidong Yu and Peng Liu and Qiang Liu and Shawn Yue and Senbin Yang and Shiming Yang and Tao Yu and Wen Xie and Wenhao Huang and Xiaohui Hu and Xiaoyi Ren and Xinyao Niu and Pengcheng Nie and Yuchi Xu and Yudong Liu and Yue Wang and Yuxuan Cai and Zhenyu Gu and Zhiyuan Liu and Zonghong Dai},
+  title = {Yi: Open Foundation Models by 01.AI},
+}
+
+@inproceedings{10.5555/3618408.3618510,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {2304.01373},
+  year = {2023},
+  author = {Biderman, Stella and Schoelkopf, Hailey and Anthony, Quentin and Bradley, Herbie and O'Brien, Kyle and Hallahan, Eric and Khan, Mohammad Aflah and Purohit, Shivanshu and Prashanth, USVSN Sai and Raff, Edward and Skowron, Aviya and Sutawika, Lintang and Van Der Wal, Oskar},
+  title = {Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling},
+  series = {ICML'23},
+  location = {<conf-loc>, <city>Honolulu</city>, <state>Hawaii</state>, <country>USA</country>, </conf-loc>},
+  numpages = {34},
+  articleno = {102},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+  abstract = {How do large language models (LLMs) develop and evolve over the course of training? How do these patterns change as models scale? To answer these questions, we introduce Pythia, a suite of 16 LLMs all trained on public data seen in the exact same order and ranging in size from 70M to 12B parameters. We provide public access to 154 checkpoints for each one of the 16 models, alongside tools to download and reconstruct their exact training dataloaders for further study. We intend Pythia to facilitate research in many areas, and we present several case studies including novel results in memorization, term frequency effects on few-shot performance, and reducing gender bias. We demonstrate that this highly controlled setup can be used to yield novel insights toward LLMs and their training dynamics. Trained models, analysis code, training code, and training data can be found at https://github.com/EleutherAI/pythia.},
+  publisher = {JMLR.org},
+}
+
+@inproceedings{NEURIPS2022_b1efde53,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {2203.02155},
+  year = {2022},
+  author = {Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and Schulman, John and Hilton, Jacob and Kelton, Fraser and Miller, Luke and Simens, Maddie and Askell, Amanda and Welinder, Peter and Christiano, Paul F and Leike, Jan and Lowe, Ryan},
+  title = {Training language models to follow instructions with human feedback},
+  volume = {35},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf},
+  publisher = {Curran Associates, Inc.},
+  pages = {27730--27744},
+  editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+  booktitle = {Advances in Neural Information Processing Systems},
+}
+
+@inproceedings{10.1145/3340531.3411992,
+  series = {CIKM '20},
+  location = {Virtual Event, Ireland},
+  keywords = {recommender systems, neural template explanation, natural language generation, explainable recommendation},
+  numpages = {10},
+  pages = {755–764},
+  booktitle = {Proceedings of the 29th ACM International Conference on Information & Knowledge Management},
+  abstract = {Personalized recommender systems are important to assist user decision-making in the era of information overload. Meanwhile, explanations of the recommendations further help users to better understand the recommended items so as to make informed choices, which gives rise to the importance of explainable recommendation research. Textual sentence-based explanation has been an important form of explanations for recommender systems due to its advantage in communicating rich information to users. However, current approaches to generating sentence explanations are either limited to predefined sentence templates, which restricts the sentence expressiveness, or opt for free-style sentence generation, which makes it difficult for sentence quality control. In an attempt to benefit both sentence expressiveness and quality, we propose a Neural Template (NETE) explanation generation framework, which brings the best of both worlds by learning sentence templates from data and generating template-controlled sentences that comment about specific features. Experimental results on real-world datasets show that NETE consistently outperforms state-of-the-art explanation generation approaches in terms of sentence quality and expressiveness. Further analysis on case study also shows the advantages of NETE on generating diverse and controllable explanations.},
+  doi = {10.1145/3340531.3411992},
+  url = {https://doi.org/10.1145/3340531.3411992},
+  address = {New York, NY, USA},
+  publisher = {Association for Computing Machinery},
+  isbn = {9781450368599},
+  year = {2020},
+  title = {Generate Neural Template Explanations for Recommendation},
+  author = {Li, Lei and Zhang, Yongfeng and Chen, Li},
+}
+
+@misc{ajwani2024llmgenerated,
+  primaryclass = {cs.CL},
+  archiveprefix = {arXiv},
+  eprint = {2405.06800},
+  year = {2024},
+  author = {Rohan Ajwani and Shashidhar Reddy Javaji and Frank Rudzicz and Zining Zhu},
+  title = {LLM-Generated Black-box Explanations Can Be Adversarially Helpful},
+}
+
+@inproceedings{joshi-etal-2023-machine,
+  abstract = {Among the remarkable emergent capabilities of large language models (LMs) is free-text rationalization; beyond certain scale, large LMs are capable of generating seemingly useful rationalizations, which in turn, can dramatically enhance their performances on leaderboards. This phenomenon raises a question: can machine generated rationales also be useful for humans, especially when lay humans try to answer questions based on those machine rationales? We observe that human utility of existing rationales is far from satisfactory and expensive to estimate with human studies. Existing metrics like task performance of the LM generating the rationales or similarity between generated and gold rationales are not good indicators of their human utility. While we observe that certain properties of rationales like conciseness and novelty are correlated with their human utility, estimating them without human involvement is challenging. We show that, by estimating a rationale′s helpfulness in answering similar unseen instances, we can measure its human utility to a better extent. We also translate this finding into an automated score, Gen-U, that we propose, which can help improve LMs′ ability to generate rationales with better human utility, while maintaining most of its task performance. Lastly, we release all code and collected data with this project.},
+  pages = {7103--7128},
+  doi = {10.18653/v1/2023.acl-long.392},
+  url = {https://aclanthology.org/2023.acl-long.392},
+  publisher = {Association for Computational Linguistics},
+  address = {Toronto, Canada},
+  year = {2023},
+  month = {July},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  editor = {Rogers, Anna  and
+Boyd-Graber, Jordan  and
+Okazaki, Naoaki},
+  author = {Joshi, Brihi  and
+Liu, Ziyi  and
+Ramnath, Sahana  and
+Chan, Aaron  and
+Tong, Zhewei  and
+Nie, Shaoliang  and
+Wang, Qifan  and
+Choi, Yejin  and
+Ren, Xiang},
+  title = {Are Machine Rationales (Not) Useful to Humans? Measuring and Improving Human Utility of Free-text Rationales},
+}
+
+@article{narang2020wt5,
+  year = {2020},
+  journal = {arXiv preprint arXiv:2004.14546},
+  author = {Narang, Sharan and Raffel, Colin and Lee, Katherine and Roberts, Adam and Fiedel, Noah and Malkan, Karishma},
+  title = {Wt5?! training text-to-text models to explain their predictions},
+}
+
+@article{chan2022frame,
+  year = {2022},
+  journal = {arXiv preprint arXiv:2207.00779},
+  author = {Chan, Aaron and Nie, Shaoliang and Tan, Liang and Peng, Xiaochang and Firooz, Hamed and Sanjabi, Maziar and Ren, Xiang},
+  title = {Frame: Evaluating rationale-label consistency metrics for free-text rationales},
+}
+
+@inproceedings{ehsan2024Who,
+  archiveprefix = {arxiv},
+  urldate = {2024-05-31},
+  url = {http://arxiv.org/abs/2107.13509},
+  pages = {1--32},
+  primaryclass = {cs},
+  eprint = {2107.13509},
+  month = {May},
+  year = {2024},
+  author = {Ehsan, Upol and Passi, Samir and Liao, Q. Vera and Chan, Larry and Lee, I.-Hsiang and Muller, Michael and Riedl, Mark O.},
+  booktitle = {Proceedings of the CHI Conference on Human Factors in Computing Systems},
+  shorttitle = {The Who in XAI},
+  title = {The Who in XAI: How AI Background Shapes Perceptions of AI Explanations},
+}
+
+@inproceedings{geng2022Improving,
+  url = {https://aclanthology.org/2022.acl-long.20},
+  address = {Dublin, Ireland},
+  publisher = {Association for Computational Linguistics},
+  pages = {244--255},
+  month = {May},
+  year = {2022},
+  editor = {Muresan, Smaranda and Nakov, Preslav and Villavicencio, Aline},
+  author = {Geng, Shijie and Fu, Zuohui and Ge, Yingqiang and Li, Lei and de Melo, Gerard and Zhang, Yongfeng},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  title = {Improving Personalized Explanation Generation through Visualization},
+}
+
+@inproceedings{goyal2023What,
+  url = {https://aclanthology.org/2023.emnlp-main.201},
+  address = {Singapore},
+  publisher = {Association for Computational Linguistics},
+  pages = {3313--3330},
+  month = {December},
+  year = {2023},
+  editor = {Bouamor, Houda and Pino, Juan and Bali, Kalika},
+  author = {Goyal, Navita and Briakou, Eleftheria and Liu, Amanda and Baumler, Connor and Bonial, Claire and Micher, Jeffrey and Voss, Clare and Carpuat, Marine and Daumé III, Hal},
+  booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+  shorttitle = {What Else Do I Need to Know?},
+  title = {What Else Do I Need to Know? The Effect of Background Information on Users' Reliance on QA Systems},
+}
+
+@inproceedings{wiegreffe-etal-2022-reframing,
+  abstract = {Large language models are increasingly capable of generating fluent-appearing text with relatively little task-specific supervision. But can these models accurately explain classification decisions? We consider the task of generating free-text explanations using human-written examples in a few-shot manner. We find that (1) authoring higher quality prompts results in higher quality generations; and (2) surprisingly, in a head-to-head comparison, crowdworkers often prefer explanations generated by GPT-3 to crowdsourced explanations in existing datasets. Our human studies also show, however, that while models often produce factual, grammatical, and sufficient explanations, they have room to improve along axes such as providing novel information and supporting the label. We create a pipeline that combines GPT-3 with a supervised filter that incorporates binary acceptability judgments from humans in the loop. Despite the intrinsic subjectivity of acceptability judgments, we demonstrate that acceptability is partially correlated with various fine-grained attributes of explanations. Our approach is able to consistently filter GPT-3-generated explanations deemed acceptable by humans.},
+  pages = {632--658},
+  doi = {10.18653/v1/2022.naacl-main.47},
+  url = {https://aclanthology.org/2022.naacl-main.47},
+  publisher = {Association for Computational Linguistics},
+  address = {Seattle, United States},
+  year = {2022},
+  month = {July},
+  booktitle = {Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  editor = {Carpuat, Marine  and
+de Marneffe, Marie-Catherine  and
+Meza Ruiz, Ivan Vladimir},
+  author = {Wiegreffe, Sarah  and
+Hessel, Jack  and
+Swayamdipta, Swabha  and
+Riedl, Mark  and
+Choi, Yejin},
+  title = {Reframing Human-AI Collaboration for Generating Free-Text Explanations},
+}
+
+@inproceedings{marasovic-etal-2022-shot,
+  abstract = {Self-rationalization models that predict task labels and generate free-text elaborations for their predictions could enable more intuitive interaction with NLP systems. These models are, however, currently trained with a large amount of human-written free-text explanations for each task which hinders their broader usage. We propose to study a more realistic setting of self-rationalization using few training examples. We present FEB---a standardized collection of four existing English-language datasets and associated metrics. We identify the right prompting approach by extensively exploring natural language prompts on FEB. Then, by using this prompt and scaling the model size, we demonstrate that making progress on few-shot self-rationalization is possible. We show there is still ample room for improvement in this task: the average plausibility of generated explanations assessed by human annotators is at most 51% (with GPT-3), while plausibility of human explanations is 76%. We hope that FEB and our proposed approach will spur the community to take on the few-shot self-rationalization challenge.},
+  pages = {410--424},
+  doi = {10.18653/v1/2022.findings-naacl.31},
+  url = {https://aclanthology.org/2022.findings-naacl.31},
+  publisher = {Association for Computational Linguistics},
+  address = {Seattle, United States},
+  year = {2022},
+  month = {July},
+  booktitle = {Findings of the Association for Computational Linguistics: NAACL 2022},
+  editor = {Carpuat, Marine  and
+de Marneffe, Marie-Catherine  and
+Meza Ruiz, Ivan Vladimir},
+  author = {Marasovic, Ana  and
+Beltagy, Iz  and
+Downey, Doug  and
+Peters, Matthew},
+  title = {Few-Shot Self-Rationalization with Natural Language Prompts},
+}
+
+@inproceedings{lyu-etal-2023-faithful,
+  pages = {305--329},
+  doi = {10.18653/v1/2023.ijcnlp-main.20},
+  url = {https://aclanthology.org/2023.ijcnlp-main.20},
+  publisher = {Association for Computational Linguistics},
+  address = {Nusa Dua, Bali},
+  year = {2023},
+  month = {November},
+  booktitle = {Proceedings of the 13th International Joint Conference on Natural Language Processing and the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  editor = {Park, Jong C.  and
+Arase, Yuki  and
+Hu, Baotian  and
+Lu, Wei  and
+Wijaya, Derry  and
+Purwarianti, Ayu  and
+Krisnadhi, Adila Alfa},
+  author = {Lyu, Qing  and
+Havaldar, Shreya  and
+Stein, Adam  and
+Zhang, Li  and
+Rao, Delip  and
+Wong, Eric  and
+Apidianaki, Marianna  and
+Callison-Burch, Chris},
+  title = {Faithful Chain-of-Thought Reasoning},
+}
+
+@inproceedings{deyoung-etal-2020-eraser,
+  abstract = {State-of-the-art models in NLP are now predominantly based on deep neural networks that are opaque in terms of how they come to make predictions. This limitation has increased interest in designing more interpretable deep models for NLP that reveal the `reasoning′ behind model outputs. But work in this direction has been conducted on different datasets and tasks with correspondingly unique aims and metrics; this makes it difficult to track progress. We propose the \\textbfEvaluating \\textbfRationales \\textbfAnd \\textbfSimple \\textbfEnglish \\textbfReasoning (\\textbfERASER a benchmark to advance research on interpretable models in NLP. This benchmark comprises multiple datasets and tasks for which human annotations of ``rationales″ (supporting evidence) have been collected. We propose several metrics that aim to capture how well the rationales provided by models align with human rationales, and also how \\textitfaithful these rationales are (i.e., the degree to which provided rationales influenced the corresponding predictions). Our hope is that releasing this benchmark facilitates progress on designing more interpretable NLP systems. The benchmark, code, and documentation are available at r̆lhttps://www.eraserbenchmark.com/},
+  pages = {4443--4458},
+  doi = {10.18653/v1/2020.acl-main.408},
+  url = {https://aclanthology.org/2020.acl-main.408},
+  publisher = {Association for Computational Linguistics},
+  address = {Online},
+  year = {2020},
+  month = {July},
+  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  editor = {Jurafsky, Dan  and
+Chai, Joyce  and
+Schluter, Natalie  and
+Tetreault, Joel},
+  author = {DeYoung, Jay  and
+Jain, Sarthak  and
+Rajani, Nazneen Fatema  and
+Lehman, Eric  and
+Xiong, Caiming  and
+Socher, Richard  and
+Wallace, Byron C.},
+  title = {ERASER: A Benchmark to Evaluate Rationalized NLP Models},
+}
+
+@article{si2024large,
+  year = {2024},
+  journal = {NAACL},
+  author = {Si, Chenglei and Goyal, Navita and Wu, Sherry Tongshuang and Zhao, Chen and Feng, Shi and Daumé III, Hal and Boyd-Graber, Jordan},
+  title = {Large Language Models Help Humans Verify Truthfulness--Except When They Are Convincingly Wrong},
+}
+
+@article{wang2024sotopia,
+  year = {2024},
+  journal = {arXiv preprint arXiv:2403.08715},
+  author = {Wang, Ruiyi and Yu, Haofei and Zhang, Wenxin and Qi, Zhengyang and Sap, Maarten and Neubig, Graham and Bisk, Yonatan and Zhu, Hao},
+  title = {SOTOPIA-$π$: Interactive Learning of Socially Intelligent Language Agents},
+}
+
+@article{rao2024normad,
+  year = {2024},
+  journal = {arXiv preprint arXiv:2404.12464},
+  author = {Rao, Abhinav and Yerukola, Akhila and Shah, Vishwa and Reinecke, Katharina and Sap, Maarten},
+  title = {Normad: A benchmark for measuring the cultural adaptability of large language models},
+}
+
+@article{yerukola2024pope,
+  year = {2024},
+  journal = {arXiv preprint arXiv:2405.08760},
+  author = {Yerukola, Akhila and Vaduguru, Saujas and Fried, Daniel and Sap, Maarten},
+  title = {Is the Pope Catholic? Yes, the Pope is Catholic. Generative Evaluation of Intent Resolution in LLMs},
+}
+
+@inproceedings{liu2024Evaluating,
+  urldate = {2024-06-01},
+  url = {http://arxiv.org/abs/2405.20253},
+  journal = {ACL},
+  eprint = {2405.20253},
+  month = {May},
+  year = {2024},
+  booktitle = {Proceedings of the 2024 Annual Conference of the Association for Computational Linguistics},
+  author = {Liu, Andy and Diab, Mona and Fried, Daniel},
+  title = {Evaluating Large Language Model Biases in Persona-Steered Generation},
+}
+
+@article{vanmerrienboer2005Cognitive,
+  urldate = {2024-06-01},
+  url = {https://doi.org/10.1007/s10648-005-3951-0},
+  issn = {1573-336X},
+  pages = {147--177},
+  number = {2},
+  volume = {17},
+  journal = {Educ Psychol Rev},
+  month = {June},
+  year = {2005},
+  author = {van Merriënboer, Jeroen J. G. and Sweller, John},
+  shorttitle = {Cognitive Load Theory and Complex Learning},
+  title = {Cognitive Load Theory and Complex Learning: Recent Developments and Future Directions},
+}
+
+@misc{administrationWrite,
+  year = {2011},
+  urldate = {2024-06-01},
+  url = {https://www.plainlanguage.gov/guidelines/audience/},
+  author = {Administration, General Services},
+  title = {Write for Your Audience},
+}
+
+@misc{purdueTone,
+  urldate = {2024-06-01},
+  url = {https://owl.purdue.edu/owl/general_writing/writing_style/diction/tone_mood_audience.html},
+  author = {Purdue, Online Writing Lab},
+  title = {Tone, Mood, and Audience - Purdue OWL® - Purdue University},
+}
+
+@misc{stephen2022Guide,
+  urldate = {2024-06-01},
+  url = {https://writing.colostate.edu/guides/guide.cfm?guideid=19},
+  year = {2022},
+  author = {Stephen, Reid and Kiefer, Kate and Kowalski, Dawn and Bennett, Andrea},
+  title = {Guide: Adapting to Your Audience},
+}
+
+@book{cutts2020oxford,
+  publisher = {Oxford University Press, USA},
+  year = {2020},
+  author = {Cutts, Martin},
+  title = {Oxford guide to plain English},
+}
+
+@inproceedings{geng2022recommendation,
+  year = {2022},
+  pages = {299--315},
+  booktitle = {Proceedings of the 16th ACM Conference on Recommender Systems},
+  author = {Geng, Shijie and Liu, Shuchang and Fu, Zuohui and Ge, Yingqiang and Zhang, Yongfeng},
+  title = {Recommendation as language processing (rlp): A unified pretrain, personalized prompt & predict paradigm (p5)},
+}
+

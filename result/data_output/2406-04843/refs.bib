@@ -1,0 +1,633 @@
+@inproceedings{stark2024dirichlet,
+  year = {2024},
+  journal = {arXiv preprint arXiv:2402.05841},
+  author = {Stark, Hannes and Jing, Bowen and Wang, Chenyu and Corso, Gabriele and Berger, Bonnie and Barzilay, Regina and Jaakkola, Tommi},
+  title = {Dirichlet Flow Matching with Applications to DNA Sequence Design},
+  abstract = {Discrete diffusion or flow models could enable faster and more controllable sequence generation than autoregressive models. We show that naive linear flow matching on the simplex is insufficient toward this goal since it suffers from discontinuities in the training target and further pathologies. To overcome this, we develop Dirichlet flow matching on the simplex based on mixtures of Dirichlet distributions as probability paths. In this framework, we derive a connection between the mixtures’ scores and the flow’s vector field that allows for classifier and classifier-free guidance. Further, we provide distilled Dirichlet flow matching, which enables one-step sequence generation with minimal performance hits, resulting in $O(L)$ speedups compared to autoregressive models. On complex DNA sequence generation tasks, we demonstrate superior performance compared to all baselines in distributional metrics and in achieving desired design targets for generated sequences. Finally, we show that our classifier-free guidance approach improves unconditional generation and is effective for generating DNA that satisfies design targets.},
+  url = {https://proceedings.mlr.press/v235/stark24b.html},
+  pdf = {https://raw.githubusercontent.com/mlresearch/v235/main/assets/stark24b/stark24b.pdf},
+  publisher = {PMLR},
+  month = {21--27 Jul},
+  series = {Proceedings of Machine Learning Research},
+  volume = {235},
+  editor = {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},
+  pages = {46495--46513},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+}
+
+@inproceedings{jo2022scorebased,
+  langid = {english},
+  abstract = {Generating graph-structured data requires learning the underlying distribution of graphs. Yet, this is a challenging problem, and the previous graph generative methods either fail to capture the permutation-invariance property of graphs or cannot sufficiently model the complex dependency between nodes and edges, which is crucial for generating real-world graphs such as molecules. To overcome such limitations, we propose a novel score-based generative model for graphs with a continuous-time framework. Specifically, we propose a new graph diffusion process that models the joint distribution of the nodes and edges through a system of stochastic differential equations (SDEs). Then, we derive novel score matching objectives tailored for the proposed diffusion process to estimate the gradient of the joint log-density with respect to each component, and introduce a new solver for the system of SDEs to efficiently sample from the reverse diffusion process. We validate our graph generation method on diverse datasets, on which it either achieves significantly superior or competitive performance to the baselines. Further analysis shows that our method is able to generate molecules that lie close to the training distribution yet do not violate the chemical valency rule, demonstrating the effectiveness of the system of SDEs in modeling the node-edge relationships.},
+  urldate = {2024-05-22},
+  issn = {2640-3498},
+  publisher = {PMLR},
+  pages = {10362--10383},
+  month = {June},
+  year = {2022},
+  author = {Jo, Jaehyeong and Lee, Seul and Hwang, Sung Ju},
+  booktitle = {Proceedings of the 39th International Conference on Machine Learning},
+  title = {Score-Based Generative Modeling of Graphs via the System of Stochastic Differential Equations},
+  url = {https://arxiv.org/abs/2202.02514},
+  journal = {arXiv:2202.02514},
+}
+
+@inproceedings{vignac2022digress,
+  langid = {english},
+  abstract = {This work introduces DiGress, a discrete denoising diffusion model for generating graphs with categorical node and edge attributes. Our model utilizes a discrete diffusion process that progressively edits graphs with noise, through the process of adding or removing edges and changing the categories. A graph transformer network is trained to revert this process, simplifying the problem of distribution learning over graphs into a sequence of node and edge classification tasks. We further improve sample quality by introducing a Markovian noise model that preserves the marginal distribution of node and edge types during diffusion, and by incorporating auxiliary graph-theoretic features. A procedure for conditioning the generation on graph-level features is also proposed. DiGress achieves state-of-the-art performance on molecular and non-molecular datasets, with up to 3x validity improvement on a planar graph dataset. It is also the first model to scale to the large GuacaMol dataset containing 1.3M drug-like molecules without the use of molecule-specific representations.},
+  urldate = {2024-05-22},
+  month = {September},
+  year = {2022},
+  author = {Vignac, Clement and Krawczuk, Igor and Siraudin, Antoine and Wang, Bohan and Cevher, Volkan and Frossard, Pascal},
+  booktitle = {The Eleventh International Conference on Learning Representations},
+  shorttitle = {DiGress},
+  title = {DiGress: Discrete Denoising Diffusion for Graph Generation},
+}
+
+@inproceedings{klein2023equivariant,
+  langid = {english},
+  abstract = {Normalizing flows are a class of deep generative models that are especially interesting for modeling probability distributions in physics, where the exact likelihood of flows allows reweighting to known target energy functions and computing unbiased observables. For instance, Boltzmann generators tackle the long-standing sampling problem in statistical physics by training flows to produce equilibrium samples of many-body systems such as small molecules and proteins. To build effective models for such systems, it is crucial to incorporate the symmetries of the target energy into the model, which can be achieved by equivariant continuous normalizing flows (CNFs). However, CNFs can be computationally expensive to train and generate samples from, which has hampered their scalability and practical application. In this paper, we introduce equivariant flow matching, a new training objective for equivariant CNFs that is based on the recently proposed optimal transport flow matching. Equivariant flow matching exploits the physical symmetries of the target energy for efficient, simulation-free training of equivariant CNFs. We demonstrate the effectiveness of flow matching on rotation and permutation invariant many-particle systems and a small molecule, alanine dipeptide, where for the first time we obtain a Boltzmann generator with significant sampling efficiency without relying on tailored internal coordinate featurization. Our results show that the equivariant flow matching objective yields flows with shorter integration paths, improved sampling efficiency, and higher scalability compared to existing methods.},
+  urldate = {2024-05-22},
+  month = {November},
+  year = {2023},
+  author = {Klein, Leon and Krämer, Andreas and Noe, Frank},
+  booktitle = {Thirty-Seventh Conference on Neural Information Processing Systems},
+  title = {Equivariant Flow Matching},
+}
+
+@inproceedings{song2023equivariant,
+  langid = {english},
+  abstract = {The generation of 3D molecules requires simultaneously deciding the categorical features (atom types) and continuous features (atom coordinates). Deep generative models, especially Diffusion Models (DMs), have demonstrated effectiveness in generating feature-rich geometries. However, existing DMs typically suffer from unstable probability dynamics with inefficient sampling speed. In this paper, we introduce geometric flow matching, which enjoys the advantages of both equivariant modeling and stabilized probability dynamics. More specifically, we propose a hybrid probability path where the coordinates probability path is regularized by an equivariant optimal transport, and the information between different modalities is aligned. Experimentally, the proposed method could consistently achieve better performance on multiple molecule generation benchmarks with 4.75\\$\\times\\$ speed up of sampling on average.},
+  urldate = {2024-05-22},
+  month = {November},
+  year = {2023},
+  author = {Song, Yuxuan and Gong, Jingjing and Xu, Minkai and Cao, Ziyao and Lan, Yanyan and Ermon, Stefano and Zhou, Hao and Ma, Wei-Ying},
+  booktitle = {Thirty-Seventh Conference on Neural Information Processing Systems},
+  title = {Equivariant Flow Matching with Hybrid Probability Transport for 3D Molecule Generation},
+}
+
+@article{austin2021structured,
+  year = {2021},
+  pages = {17981--17993},
+  volume = {34},
+  journal = {Advances in Neural Information Processing Systems},
+  author = {Austin, Jacob and Johnson, Daniel D and Ho, Jonathan and Tarlow, Daniel and Van Den Berg, Rianne},
+  title = {Structured denoising diffusion models in discrete state-spaces},
+}
+
+@inproceedings{luo2021graphdf,
+  organization = {PMLR},
+  year = {2021},
+  pages = {7192--7203},
+  booktitle = {International conference on machine learning},
+  author = {Luo, Youzhi and Yan, Keqiang and Ji, Shuiwang},
+  title = {Graphdf: A discrete flow model for molecular graph generation},
+}
+
+@article{yang2023diffsound,
+  publisher = {IEEE},
+  year = {2023},
+  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  author = {Yang, Dongchao and Yu, Jianwei and Wang, Helin and Wang, Wen and Weng, Chao and Zou, Yuexian and Yu, Dong},
+  title = {Diffsound: Discrete diffusion model for text-to-sound generation},
+}
+
+@inproceedings{inoue2023layoutdm,
+  year = {2023},
+  pages = {10167--10176},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  author = {Inoue, Naoto and Kikuchi, Kotaro and Simo-Serra, Edgar and Otani, Mayu and Yamaguchi, Kota},
+  title = {Layoutdm: Discrete diffusion model for controllable layout generation},
+}
+
+@article{liu2018constrained,
+  year = {2018},
+  volume = {31},
+  journal = {Advances in neural information processing systems},
+  author = {Liu, Qi and Allamanis, Miltiadis and Brockschmidt, Marc and Gaunt, Alexander},
+  title = {Constrained graph variational autoencoders for molecule design},
+}
+
+@article{liao2019efficient,
+  year = {2019},
+  volume = {32},
+  journal = {Advances in neural information processing systems},
+  author = {Liao, Renjie and Li, Yujia and Song, Yang and Wang, Shenlong and Hamilton, Will and Duvenaud, David K and Urtasun, Raquel and Zemel, Richard},
+  title = {Efficient graph generation with graph recurrent attention networks},
+}
+
+@article{mercado2021graph,
+  publisher = {IOP Publishing},
+  year = {2021},
+  pages = {025023},
+  number = {2},
+  volume = {2},
+  journal = {Machine Learning: Science and Technology},
+  author = {Mercado, Rocı́o and Rastemo, Tobias and Lindelöf, Edvard and Klambauer, Günter and Engkvist, Ola and Chen, Hongming and Bjerrum, Esben Jannik},
+  title = {Graph networks for molecular design},
+}
+
+@inproceedings{lippe2020categorical,
+  langid = {english},
+  abstract = {Despite their popularity, to date, the application of normalizing flows on categorical data stays limited. The current practice of using dequantization to map discrete data to a continuous space is inapplicable as categorical data has no intrinsic order. Instead, categorical data have complex and latent relations that must be inferred, like the synonymy between words. In this paper, we investigate Categorical Normalizing Flows, that is normalizing flows for categorical data. By casting the encoding of categorical data in continuous space as a variational inference problem, we jointly optimize the continuous representation and the model likelihood. Using a factorized decoder, we introduce an inductive bias to model any interactions in the normalizing flow. As a consequence, we do not only simplify the optimization compared to having a joint decoder, but also make it possible to scale up to a large number of categories that is currently impossible with discrete normalizing flows. Based on Categorical Normalizing Flows, we propose GraphCNF a permutation-invariant generative model on graphs. GraphCNF implements a three step approach modeling the nodes, edges, and adjacency matrix stepwise to increase efficiency. On molecule generation, GraphCNF outperforms both one-shot and autoregressive flow-based state-of-the-art.},
+  urldate = {2024-05-22},
+  month = {October},
+  year = {2020},
+  author = {Lippe, Phillip and Gavves, Efstratios},
+  booktitle = {International Conference on Learning Representations},
+  title = {Categorical Normalizing Flows via Continuous Transformations},
+}
+
+@article{madhawa2019graphnvp,
+  year = {2019},
+  journal = {arXiv preprint arXiv:1905.11600},
+  author = {Madhawa, Kaushalya and Ishiguro, Katushiko and Nakago, Kosuke and Abe, Motoki},
+  title = {Graphnvp: An invertible flow model for generating molecular graphs},
+}
+
+@inproceedings{trippe2022diffusion,
+  year = {2022},
+  booktitle = {The Eleventh International Conference on Learning Representations},
+  author = {Trippe, Brian L and Yim, Jason and Tischer, Doug and Baker, David and Broderick, Tamara and Barzilay, Regina and Jaakkola, Tommi S},
+  title = {Diffusion Probabilistic Modeling of Protein Backbones in 3D for the motif-scaffolding problem},
+}
+
+@inproceedings{hoogeboom2022equivariant,
+  organization = {PMLR},
+  year = {2022},
+  pages = {8867--8887},
+  booktitle = {International conference on machine learning},
+  author = {Hoogeboom, Emiel and Satorras, Vıctor Garcia and Vignac, Clément and Welling, Max},
+  title = {Equivariant diffusion for molecule generation in 3d},
+}
+
+@article{ramakrishnan2014quantum,
+  publisher = {Nature Publishing Group},
+  year = {2014},
+  pages = {1--7},
+  number = {1},
+  volume = {1},
+  journal = {Scientific data},
+  author = {Ramakrishnan, Raghunathan and Dral, Pavlo O and Rupp, Matthias and Von Lilienfeld, O Anatole},
+  title = {Quantum chemistry structures and properties of 134 kilo molecules},
+}
+
+@article{irwin2012zinc,
+  publisher = {ACS Publications},
+  year = {2012},
+  pages = {1757--1768},
+  number = {7},
+  volume = {52},
+  journal = {Journal of chemical information and modeling},
+  author = {Irwin, John J and Sterling, Teague and Mysinger, Michael M and Bolstad, Erin S and Coleman, Ryan G},
+  title = {ZINC: a free tool to discover chemistry for biology},
+}
+
+@inproceedings{martinkus2022spectre,
+  organization = {PMLR},
+  year = {2022},
+  pages = {15159--15179},
+  booktitle = {International Conference on Machine Learning},
+  author = {Martinkus, Karolis and Loukas, Andreas and Perraudin, Nathanaël and Wattenhofer, Roger},
+  title = {Spectre: Spectral conditioning helps to overcome the expressivity limits of one-shot graph generators},
+}
+
+@inproceedings{shi2020graphaf,
+  year = {2019},
+  booktitle = {International Conference on Learning Representations},
+  author = {Shi, Chence and Xu, Minkai and Zhu, Zhaocheng and Zhang, Weinan and Zhang, Ming and Tang, Jian},
+  title = {GraphAF: a Flow-based Autoregressive Model for Molecular Graph Generation},
+}
+
+@misc{Landrum2016RDKit2016_09_4,
+  year = {2016},
+  url = {https://github.com/rdkit/rdkit/releases/tag/Release_2016_09_4},
+  title = {RDKit: Open-Source Cheminformatics Software},
+  timestamp = {2017-04-11T06:11:47.000+0200},
+  keywords = {chemoinformatics drug-design pharmacophores software},
+  intrahash = {8d01fceeccd6bf2486e47d7c4207b108},
+  interhash = {ee9a4ddeff3121aa622cf35709fa6e21},
+  description = {Release 2016_09_4 (Q3 2016) Release · rdkit/rdkit},
+  biburl = {https://www.bibsonomy.org/bibtex/28d01fceeccd6bf2486e47d7c4207b108/salotz},
+  author = {Landrum, Greg},
+  added-at = {2017-04-11T06:11:47.000+0200},
+}
+
+@inproceedings{zang2020moflow,
+  year = {2020},
+  pages = {617--626},
+  booktitle = {Proceedings of the 26th ACM SIGKDD international conference on knowledge discovery & data mining},
+  author = {Zang, Chengxi and Wang, Fei},
+  title = {Moflow: an invertible flow model for generating molecular graphs},
+}
+
+@article{dwivedi2020generalization,
+  year = {2020},
+  journal = {AAAI Workshop on Deep Learning on Graphs: Methods and Applications},
+  author = {Dwivedi, Vijay Prakash and Bresson, Xavier},
+  title = {A generalization of transformer networks to graphs},
+}
+
+@inproceedings{albergo2022building,
+  langid = {english},
+  abstract = {A generative model based on a continuous-time normalizing flow between any pair of base and target probability densities is proposed. The velocity field of this flow is inferred from the probability current of a time-dependent density that interpolates between the base and the target in finite time. Unlike conventional normalizing flow inference methods based the maximum likelihood principle, which require costly backpropagation through ODE solvers, our interpolant approach leads to a simple quadratic loss for the velocity itself which is expressed in terms of expectations that are readily amenable to empirical estimation. The flow can be used to generate samples from either the base or target, and to estimate the likelihood at any time along the interpolant. In addition, the flow can be optimized to minimize the path length of the interpolant density, thereby paving the way for building optimal transport maps. In situations where the base is a Gaussian density, we also show that the velocity of our normalizing flow can also be used to construct a diffusion model to sample the target as well as estimate its score. However, our approach shows that we can bypass this diffusion completely and work at the level of the probability flow with greater simplicity, opening an avenue for methods based solely on ordinary differential equations as an alternative to those based on stochastic differential equations. Benchmarking on density estimation tasks illustrates that the learned flow can match and surpass conventional continuous flows at a fraction of the cost, and compares well with diffusions on image generation on CIFAR-10 and ImageNet \\$32 \\times 32\\$. The method scales ab-initio ODE flows to previously unreachable image resolutions, demonstrated up to \\$128\\times128\\$.},
+  urldate = {2024-05-22},
+  month = {September},
+  year = {2022},
+  author = {Albergo, Michael Samuel and Vanden-Eijnden, Eric},
+  booktitle = {The Eleventh International Conference on Learning Representations},
+  title = {Building Normalizing Flows with Stochastic Interpolants},
+}
+
+@article{albergo2023stochastic,
+  year = {2023},
+  journal = {arXiv preprint arXiv:2303.08797},
+  author = {Albergo, Michael S and Boffi, Nicholas M and Vanden-Eijnden, Eric},
+  title = {Stochastic interpolants: A unifying framework for flows and diffusions},
+}
+
+@inproceedings{liu2022flow,
+  url = {https://openreview.net/forum?id=XVjTT1nw5z},
+  year = {2023},
+  booktitle = {The Eleventh International Conference on Learning Representations },
+  author = {Xingchao Liu and Chengyue Gong and Qiang Liu},
+  title = {Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow},
+}
+
+@article{preuer2018frechet,
+  publisher = {ACS Publications},
+  year = {2018},
+  pages = {1736--1741},
+  number = {9},
+  volume = {58},
+  journal = {Journal of chemical information and modeling},
+  author = {Preuer, Kristina and Renz, Philipp and Unterthiner, Thomas and Hochreiter, Sepp and Klambauer, Gunter},
+  title = {Fréchet ChemNet distance: a metric for generative models for molecules in drug discovery},
+}
+
+@article{ho2020denoising,
+  year = {2020},
+  pages = {6840--6851},
+  volume = {33},
+  journal = {Advances in neural information processing systems},
+  author = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+  title = {Denoising diffusion probabilistic models},
+}
+
+@inproceedings{song2020score,
+  year = {2020},
+  booktitle = {International Conference on Learning Representations},
+  author = {Song, Yang and Sohl-Dickstein, Jascha and Kingma, Diederik P and Kumar, Abhishek and Ermon, Stefano and Poole, Ben},
+  title = {Score-Based Generative Modeling through Stochastic Differential Equations},
+}
+
+@article{anderson1982reverse,
+  publisher = {Elsevier},
+  year = {1982},
+  pages = {313--326},
+  number = {3},
+  volume = {12},
+  journal = {Stochastic Processes and their Applications},
+  author = {Anderson, Brian DO},
+  title = {Reverse-time diffusion equation models},
+}
+
+@article{ramesh2022hierarchical,
+  year = {2022},
+  pages = {3},
+  number = {2},
+  volume = {1},
+  journal = {arXiv preprint arXiv:2204.06125},
+  author = {Ramesh, Aditya and Dhariwal, Prafulla and Nichol, Alex and Chu, Casey and Chen, Mark},
+  title = {Hierarchical text-conditional image generation with clip latents},
+}
+
+@inproceedings{rombach2022high,
+  year = {2022},
+  pages = {10684--10695},
+  booktitle = {Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  author = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Björn},
+  title = {High-resolution image synthesis with latent diffusion models},
+}
+
+@inproceedings{song2020denoising,
+  year = {2020},
+  booktitle = {International Conference on Learning Representations},
+  author = {Song, Jiaming and Meng, Chenlin and Ermon, Stefano},
+  title = {Denoising Diffusion Implicit Models},
+}
+
+@inproceedings{zhang2022fast,
+  year = {2022},
+  booktitle = {The Eleventh International Conference on Learning Representations},
+  author = {Zhang, Qinsheng and Chen, Yongxin},
+  title = {Fast Sampling of Diffusion Models with Exponential Integrator},
+}
+
+@article{chen2018neural,
+  year = {2018},
+  volume = {31},
+  journal = {Advances in neural information processing systems},
+  author = {Chen, Ricky TQ and Rubanova, Yulia and Bettencourt, Jesse and Duvenaud, David K},
+  title = {Neural ordinary differential equations},
+}
+
+@article{song2021maximum,
+  year = {2021},
+  pages = {1415--1428},
+  volume = {34},
+  journal = {Advances in neural information processing systems},
+  author = {Song, Yang and Durkan, Conor and Murray, Iain and Ermon, Stefano},
+  title = {Maximum likelihood training of score-based diffusion models},
+}
+
+@article{vincent2011connection,
+  publisher = {MIT Press},
+  year = {2011},
+  pages = {1661--1674},
+  number = {7},
+  volume = {23},
+  journal = {Neural computation},
+  author = {Vincent, Pascal},
+  title = {A connection between score matching and denoising autoencoders},
+}
+
+@inproceedings{grathwohl2018scalable,
+  url = {https://openreview.net/forum?id=rJxgknCcK7},
+  year = {2019},
+  booktitle = {International Conference on Learning Representations},
+  author = {Will Grathwohl and Ricky T. Q. Chen and Jesse Bettencourt and David Duvenaud},
+  title = {Scalable Reversible Generative Models with Free-form Continuous Dynamics},
+}
+
+@article{rozen2021moser,
+  year = {2021},
+  pages = {17669--17680},
+  volume = {34},
+  journal = {Advances in Neural Information Processing Systems},
+  author = {Rozen, Noam and Grover, Aditya and Nickel, Maximilian and Lipman, Yaron},
+  title = {Moser flow: Divergence-based generative modeling on manifolds},
+}
+
+@inproceedings{ben2022matching,
+  abstract = {Continuous Normalizing Flows (CNFs) are a class of generative models that transform a prior distribution to a model distribution by solving an ordinary differential equation (ODE). We propose to train CNFs on manifolds by minimizing probability path divergence (PPD), a novel family of divergences between the probability density path generated by the CNF and a target probability density path. PPD is formulated using a logarithmic mass conservation formula which is a linear first order partial differential equation relating the log target probabilities and the CNF’s defining vector field. PPD has several key benefits over existing methods: it sidesteps the need to solve an ODE per iteration, readily applies to manifold data, scales to high dimensions, and is compatible with a large family of target paths interpolating pure noise and data in finite time. Theoretically, PPD is shown to bound classical probability divergences. Empirically, we show that CNFs learned by minimizing PPD achieve state-of-the-art results in likelihoods and sample quality on existing low-dimensional manifold benchmarks, and is the first example of a generative model to scale to moderately high dimensional manifolds.},
+  url = {https://proceedings.mlr.press/v162/ben-hamu22a.html},
+  pdf = {https://proceedings.mlr.press/v162/ben-hamu22a/ben-hamu22a.pdf},
+  publisher = {PMLR},
+  month = {17--23 Jul},
+  series = {Proceedings of Machine Learning Research},
+  volume = {162},
+  editor = {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  year = {2022},
+  pages = {1749--1763},
+  booktitle = {Proceedings of the 39th International Conference on Machine Learning},
+  author = {Ben-Hamu, Heli and Cohen, Samuel and Bose, Joey and Amos, Brandon and Nickel, Maximillian and Grover, Aditya and Chen, Ricky T. Q. and Lipman, Yaron},
+  title = {Matching Normalizing Flows and Probability Paths on Manifolds},
+}
+
+@inproceedings{lipman2023flow,
+  url = {https://openreview.net/forum?id=PqvMRDCJT9t},
+  year = {2023},
+  booktitle = {The Eleventh International Conference on Learning Representations },
+  author = {Yaron Lipman and Ricky T. Q. Chen and Heli Ben-Hamu and Maximilian Nickel and Matthew Le},
+  title = {Flow Matching for Generative Modeling},
+}
+
+@inproceedings{chen2024flow,
+  year = {2024},
+  booktitle = {The Twelfth International Conference on Learning Representations},
+  author = {Chen, Ricky TQ and Lipman, Yaron},
+  title = {Flow matching on general geometries},
+}
+
+@article{wildberger2024flow,
+  year = {2024},
+  volume = {36},
+  journal = {Advances in Neural Information Processing Systems},
+  author = {Wildberger, Jonas and Dax, Maximilian and Buchholz, Simon and Green, Stephen and Macke, Jakob H and Schölkopf, Bernhard},
+  title = {Flow Matching for Scalable Simulation-Based Inference},
+}
+
+@article{dao2023flow,
+  year = {2023},
+  journal = {arXiv preprint arXiv:2307.08698},
+  author = {Dao, Quan and Phung, Hao and Nguyen, Binh and Tran, Anh},
+  title = {Flow matching in latent space},
+}
+
+@article{ebrahimy2010stock,
+  publisher = {Elsevier},
+  year = {2010},
+  pages = {1325--1353},
+  number = {4},
+  volume = {145},
+  journal = {Journal of Economic Theory},
+  author = {Ebrahimy, Ehsan and Shimer, Robert},
+  title = {Stock--flow matching},
+}
+
+@article{kohler2023flow,
+  publisher = {ACS Publications},
+  year = {2023},
+  pages = {942--952},
+  number = {3},
+  volume = {19},
+  journal = {Journal of Chemical Theory and Computation},
+  author = {Kohler, Jonas and Chen, Yaoyi and Kramer, Andreas and Clementi, Cecilia and Noé, Frank},
+  title = {Flow-matching: Efficient coarse-graining of molecular dynamics without forces},
+}
+
+@inproceedings{you2018graphrnn,
+  organization = {PMLR},
+  year = {2018},
+  pages = {5708--5717},
+  booktitle = {International conference on machine learning},
+  author = {You, Jiaxuan and Ying, Rex and Ren, Xiang and Hamilton, William and Leskovec, Jure},
+  title = {Graphrnn: Generating realistic graphs with deep auto-regressive models},
+}
+
+@inproceedings{campbell2024generative,
+  year = {2024},
+  journal = {arXiv preprint arXiv:2402.04997},
+  author = {Campbell, Andrew and Yim, Jason and Barzilay, Regina and Rainforth, Tom and Jaakkola, Tommi},
+  title = {Generative Flows on Discrete State-Spaces: Enabling Multimodal Flows with Applications to Protein Co-Design},
+  abstract = {Combining discrete and continuous data is an important capability for generative models. We present Discrete Flow Models (DFMs), a new flow-based model of discrete data that provides the missing link in enabling flow-based generative models to be applied to multimodal continuous and discrete data problems. Our key insight is that the discrete equivalent of continuous space flow matching can be realized using Continuous Time Markov Chains. DFMs benefit from a simple derivation that includes discrete diffusion models as a specific instance while allowing improved performance over existing diffusion-based approaches. We utilize our DFMs method to build a multimodal flow-based modeling framework. We apply this capability to the task of protein co-design, wherein we learn a model for jointly generating protein structure and sequence. Our approach achieves state-of-the-art co-design performance while allowing the same multimodal model to be used for flexible generation of the sequence or structure.},
+  url = {https://proceedings.mlr.press/v235/campbell24a.html},
+  pdf = {https://raw.githubusercontent.com/mlresearch/v235/main/assets/campbell24a/campbell24a.pdf},
+  publisher = {PMLR},
+  month = {21--27 Jul},
+  series = {Proceedings of Machine Learning Research},
+  volume = {235},
+  editor = {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},
+  pages = {5453--5512},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+}
+
+@inproceedings{rezende2015variational,
+  organization = {PMLR},
+  year = {2015},
+  pages = {1530--1538},
+  booktitle = {International conference on machine learning},
+  author = {Rezende, Danilo and Mohamed, Shakir},
+  title = {Variational inference with normalizing flows},
+}
+
+@article{papamakarios2021normalizing,
+  year = {2021},
+  pages = {1--64},
+  number = {57},
+  volume = {22},
+  journal = {Journal of Machine Learning Research},
+  author = {Papamakarios, George and Nalisnick, Eric and Rezende, Danilo Jimenez and Mohamed, Shakir and Lakshminarayanan, Balaji},
+  title = {Normalizing flows for probabilistic modeling and inference},
+}
+
+@article{sen2008collective,
+  year = {2008},
+  pages = {93--93},
+  number = {3},
+  volume = {29},
+  journal = {AI magazine},
+  author = {Sen, Prithviraj and Namata, Galileo and Bilgic, Mustafa and Getoor, Lise and Galligher, Brian and Eliassi-Rad, Tina},
+  title = {Collective classification in network data},
+}
+
+@article{schomburg2004brenda,
+  publisher = {Oxford University Press},
+  year = {2004},
+  pages = {D431--D433},
+  number = {suppl_1},
+  volume = {32},
+  journal = {Nucleic acids research},
+  author = {Schomburg, Ida and Chang, Antje and Ebeling, Christian and Gremse, Marion and Heldt, Christian and Huhn, Gregor and Schomburg, Dietmar},
+  title = {BRENDA, the enzyme database: updates and major new developments},
+}
+
+@inproceedings{rissanen2022generative,
+  year = {2022},
+  journal = {arXiv preprint arXiv:2206.13397},
+  author = {Rissanen, Severi and Heinonen, Markus and Solin, Arno},
+  title = {Generative modelling with inverse heat dissipation},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+}
+
+@article{daras2022soft,
+  year = {2022},
+  journal = {arXiv preprint arXiv:2209.05442},
+  author = {Daras, Giannis and Delbracio, Mauricio and Talebi, Hossein and Dimakis, Alexandros G and Milanfar, Peyman},
+  title = {Soft diffusion: Score matching for general corruptions},
+}
+
+@inproceedings{hoogeboom2022blurring,
+  year = {2022},
+  journal = {arXiv preprint arXiv:2209.05557},
+  author = {Hoogeboom, Emiel and Salimans, Tim},
+  title = {Blurring diffusion models},
+  url = {https://openreview.net/forum?id=OjDkC57x5sz},
+  booktitle = {The Eleventh International Conference on Learning Representations },
+}
+
+@inproceedings{singhal2023diffuse,
+  year = {2023},
+  booktitle = {International Conference on Learning Representations},
+  author = {Singhal, Raghav and Goldstein, Mark and Ranganath, Rajesh},
+  title = {Where to Diffuse, How to Diffuse and How to Get Back: Automated Learning in Multivariate Diffusions},
+}
+
+@misc{richemond2022categorical,
+  keywords = {Computer Science - Machine Learning},
+  archiveprefix = {arXiv},
+  abstract = {Diffusion models typically operate in the standard framework of generative modelling by producing continuously-valued datapoints. To this end, they rely on a progressive Gaussian smoothing of the original data distribution, which admits an SDE interpretation involving increments of a standard Brownian motion. However, some applications such as text generation or reinforcement learning might naturally be better served by diffusing categorical-valued data, i.e., lifting the diffusion to a space of probability distributions. To this end, this short theoretical note proposes Simplex Diffusion, a means to directly diffuse datapoints located on an n-dimensional probability simplex. We show how this relates to the Dirichlet distribution on the simplex and how the analogous SDE is realized thanks to a multi-dimensional Cox-Ingersoll-Ross process (abbreviated as CIR), previously used in economics and mathematical finance. Finally, we make remarks as to the numerical implementation of trajectories of the CIR process, and discuss some limitations of our approach.},
+  urldate = {2024-10-30},
+  doi = {10.48550/arXiv.2210.14784},
+  publisher = {arXiv},
+  eprint = {2210.14784},
+  number = {arXiv:2210.14784},
+  month = {October},
+  year = {2022},
+  author = {Richemond, Pierre H. and Dieleman, Sander and Doucet, Arnaud},
+  title = {Categorical SDEs with Simplex Diffusion},
+}
+
+@misc{dieleman2022continuous,
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  archiveprefix = {arXiv},
+  abstract = {Diffusion models have quickly become the go-to paradigm for generative modelling of perceptual signals (such as images and sound) through iterative refinement. Their success hinges on the fact that the underlying physical phenomena are continuous. For inherently discrete and categorical data such as language, various diffusion-inspired alternatives have been proposed. However, the continuous nature of diffusion models conveys many benefits, and in this work we endeavour to preserve it. We propose CDCD, a framework for modelling categorical data with diffusion models that are continuous both in time and input space. We demonstrate its efficacy on several language modelling tasks.},
+  urldate = {2024-10-30},
+  doi = {10.48550/arXiv.2211.15089},
+  publisher = {arXiv},
+  eprint = {2211.15089},
+  number = {arXiv:2211.15089},
+  month = {December},
+  year = {2022},
+  author = {Dieleman, Sander and Sartran, Laurent and Roshannai, Arman and Savinov, Nikolay and Ganin, Yaroslav and Richemond, Pierre H. and Doucet, Arnaud and Strudel, Robin and Dyer, Chris and Durkan, Conor and Hawthorne, Curtis and Leblond, Rémi and Grathwohl, Will and Adler, Jonas},
+  title = {Continuous Diffusion for Categorical Data},
+}
+
+@article{kingma2023understanding,
+  langid = {english},
+  urldate = {2024-10-30},
+  pages = {65484--65516},
+  volume = {36},
+  journal = {Advances in Neural Information Processing Systems},
+  month = {December},
+  year = {2023},
+  author = {Kingma, Diederik and Gao, Ruiqi},
+  title = {Understanding Diffusion Objectives as the ELBO with Simple Data Augmentation},
+}
+
+@article{liu2019graph,
+  year = {2019},
+  volume = {32},
+  journal = {Advances in Neural Information Processing Systems},
+  author = {Liu, Jenny and Kumar, Aviral and Ba, Jimmy and Kiros, Jamie and Swersky, Kevin},
+  title = {Graph normalizing flows},
+}
+
+@inproceedings{simonovsky2018graphvae,
+  organization = {Springer},
+  year = {2018},
+  pages = {412--422},
+  booktitle = {Artificial Neural Networks and Machine Learning--ICANN 2018: 27th International Conference on Artificial Neural Networks, Rhodes, Greece, October 4-7, 2018, Proceedings, Part I 27},
+  author = {Simonovsky, Martin and Komodakis, Nikos},
+  title = {Graphvae: Towards generation of small graphs using variational autoencoders},
+}
+
+@inproceedings{niu2020permutation,
+  organization = {PMLR},
+  year = {2020},
+  pages = {4474--4484},
+  booktitle = {International Conference on Artificial Intelligence and Statistics},
+  author = {Niu, Chenhao and Song, Yang and Song, Jiaming and Zhao, Shengjia and Grover, Aditya and Ermon, Stefano},
+  title = {Permutation invariant graph generation via score-based generative modeling},
+}
+
+@inproceedings{liu2021graphebm,
+  url = {https://openreview.net/forum?id=Gc51PtL_zYw},
+  year = {2021},
+  booktitle = {Energy Based Models Workshop - ICLR 2021},
+  author = {Meng Liu and Keqiang Yan and Bora Oztekin and Shuiwang Ji},
+  title = {GraphEBM: Molecular Graph Generation with Energy-Based Models},
+}
+
+@inproceedings{kingma2021variational,
+  abstract = {Diffusion-based generative models have demonstrated a capacity for perceptually impressive synthesis, but can they also be great likelihood-based models? We answer this in the affirmative, and introduce a family of diffusion-based generative models that obtain state-of-the-art likelihoods on standard image density estimation benchmarks. Unlike other diffusion-based models, our method allows for efficient optimization of the noise schedule jointly with the rest of the model. We show that the variational lower bound (VLB) simplifies to a remarkably short expression in terms of the signal-to-noise ratio of the diffused data, thereby improving our theoretical understanding of this model class. Using this insight, we prove an equivalence between several models proposed in the literature. In addition, we show that the continuous-time VLB is invariant to the noise schedule, except for the signal-to-noise ratio at its endpoints. This enables us to learn a noise schedule that minimizes the variance of the resulting VLB estimator, leading to faster optimization. Combining these advances with architectural improvements, we obtain state-of-the-art likelihoods on image density estimation benchmarks, outperforming autoregressive models that have dominated these benchmarks for many years, with often significantly faster optimization. In addition, we show how to use the model as part of a bits-back compression scheme, and demonstrate lossless compression rates close to the theoretical optimum.},
+  urldate = {2024-10-30},
+  publisher = {Curran Associates, Inc.},
+  pages = {21696--21707},
+  volume = {34},
+  year = {2021},
+  author = {Kingma, Diederik and Salimans, Tim and Poole, Ben and Ho, Jonathan},
+  booktitle = {Advances in Neural Information Processing Systems},
+  title = {Variational Diffusion Models},
+}
+
+@article{daras2022soft,
+  note = {},
+  url = {https://openreview.net/forum?id=W98rebBxlQ},
+  year = {2023},
+  issn = {2835-8856},
+  journal = {Transactions on Machine Learning Research},
+  author = {Giannis Daras and Mauricio Delbracio and Hossein Talebi and Alex Dimakis and Peyman Milanfar},
+  title = {Soft Diffusion: Score Matching with General Corruptions},
+}
+
