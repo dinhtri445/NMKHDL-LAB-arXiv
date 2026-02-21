@@ -113,8 +113,8 @@ def run_task_matching(result_dir, report_path):
 def main():
     parser = argparse.ArgumentParser(description="Lab Pipeline Manager")
     parser.add_argument('--input_dir', type=str, default='data', help='Folder chứa data')
-    # Tham số này giờ sẽ là thư mục GỐC chứa tất cả kết quả (result)
-    parser.add_argument('--result_dir', type=str, default='result', help='Folder chứa toàn bộ kết quả (logs, stats, data)')
+    # Tham số này giờ sẽ là thư mục GỐC chứa tất cả kết quả (results)
+    parser.add_argument('--result_dir', type=str, default='results', help='Folder chứa toàn bộ kết quả (logs, stats, data)')
     
     parser.add_argument('--task', type=str, default='parsing', choices=['parsing', 'matching'], 
                         help='Chọn task: parsing (2.1) hoặc matching (2.2)')
